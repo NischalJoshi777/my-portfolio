@@ -45,69 +45,63 @@ class SkillsChart extends StatelessWidget {
               ? Axis.vertical
               : Axis.horizontal,
           children: [
-            ClipOval(
-              child: Container(
-                height: 32.h,
-                width: 32.h,
-                decoration: const BoxDecoration(shape: BoxShape.circle),
-                child: Image.asset(
-                  'assets/imgs/my_profile.jpg',
-                  fit: BoxFit.cover,
-                ),
-              ),
-            ),
-            const SizedBox(
-              width: 50.0,
-            ),
+            ResponsiveSize.isDesktop(context)
+                ? ClipOval(
+                    child: Container(
+                      height: 32.h,
+                      width: 32.h,
+                      decoration: const BoxDecoration(shape: BoxShape.circle),
+                      child: Image.asset(
+                        'assets/imgs/my_profile.jpg',
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  )
+                : const SizedBox.shrink(),
+            const SizedBox(width: 50.0),
             Expanded(
               flex: ResponsiveSize.isMobile(context) ? 0 : 5,
               child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Column(
-                    children: skills
-                        .map(
-                          (skill) => Container(
-                            margin: EdgeInsets.only(bottom: 15.0, right: 5.w),
-                            child: Row(
-                              children: [
-                                Expanded(
-                                  flex: skill.percentage,
-                                  child: Container(
-                                    padding: const EdgeInsets.only(left: 10.0),
-                                    alignment: Alignment.centerLeft,
-                                    height: 38.0,
-                                    color: Colors.white,
-                                    child: Text(skill.skill),
-                                  ),
-                                ),
-                                const SizedBox(
-                                  width: 10.0,
-                                ),
-                                Expanded(
-                                  flex: 100 - skill.percentage,
-                                  child: const Divider(
-                                    color: Colors.white,
-                                  ),
-                                ),
-                                const SizedBox(
-                                  width: 10.0,
-                                ),
-                                Text(
-                                  "${skill.percentage} %",
-                                  style: const TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 16.0,
-                                  ),
-                                )
-                              ],
+                children: skills
+                    .map(
+                      (skill) => Container(
+                        margin: EdgeInsets.only(bottom: 15.0, right: 5.w),
+                        child: Row(
+                          children: [
+                            Expanded(
+                              flex: skill.percentage,
+                              child: Container(
+                                padding: const EdgeInsets.only(left: 10.0),
+                                alignment: Alignment.centerLeft,
+                                height: 38.0,
+                                color: Colors.white,
+                                child: Text(skill.skill),
+                              ),
                             ),
-                          ),
-                        )
-                        .toList(),
-                  )
-                ],
+                            const SizedBox(
+                              width: 10.0,
+                            ),
+                            Expanded(
+                              flex: 100 - skill.percentage,
+                              child: const Divider(
+                                color: Colors.white,
+                              ),
+                            ),
+                            const SizedBox(
+                              width: 10.0,
+                            ),
+                            Text(
+                              "${skill.percentage} %",
+                              style: const TextStyle(
+                                color: Colors.white,
+                                fontSize: 16.0,
+                              ),
+                            )
+                          ],
+                        ),
+                      ),
+                    )
+                    .toList(),
               ),
             )
           ],

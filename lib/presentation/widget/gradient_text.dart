@@ -3,7 +3,6 @@ import 'package:my_portfolio/core/color/colors.dart';
 import 'package:my_portfolio/core/theme/my_theme.dart';
 
 class GradientText extends StatelessWidget {
-
   const GradientText(
     this.text, {
     // required this.gradient,
@@ -12,6 +11,7 @@ class GradientText extends StatelessWidget {
 
   final String text;
   final TextStyle? style;
+
   // final Gradient gradient;
 
   @override
@@ -21,7 +21,8 @@ class GradientText extends StatelessWidget {
       shaderCallback: (bounds) => Palette.pinkpurple.createShader(
         Rect.fromLTWH(0, 0, bounds.width, bounds.height),
       ),
-      child: Text(text, style: context.h2.copyWith(fontWeight: FontWeight.bold)),
+      child:
+          Text(text, style: context.h2.copyWith(fontWeight: FontWeight.bold)),
     );
   }
 }

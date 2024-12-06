@@ -9,15 +9,11 @@ class CustomHeaderText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ResponsiveSize(
-      desktop: Text(
-        text,
-        style: context.h1.copyWith(fontWeight: FontWeight.bold),
-      ),
-      mobile: Text(
-        text,
-        style: context.h2.copyWith(fontWeight: FontWeight.bold),
-      ),
+    return Text(
+      text,
+      style: ResponsiveSize.isDesktop(context)
+          ? context.h1.copyWith(fontWeight: FontWeight.bold)
+          : context.h2.copyWith(fontWeight: FontWeight.bold),
     );
   }
 }

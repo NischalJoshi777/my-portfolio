@@ -35,7 +35,7 @@ class MyTheme extends ThemeExtension<MyTheme> with _$MyThemeTailorMixin {
   @override
   final AppBarTheme appBarTheme;
 
-  MyTheme( {
+  MyTheme({
     required this.scaffoldBackGroundColor,
     required this.backgroundColor,
     required this.appBarColor,
@@ -51,7 +51,6 @@ class MyTheme extends ThemeExtension<MyTheme> with _$MyThemeTailorMixin {
     required this.bodySmall,
     required this.bodyExtraSmall,
   });
-
 }
 
 const TextStyle _base = TextStyle(
@@ -60,12 +59,12 @@ const TextStyle _base = TextStyle(
   leadingDistribution: TextLeadingDistribution.even,
 );
 
-final darkTheme = MyTheme (
+final darkTheme = MyTheme(
   iconColor: Palette.whiteColor,
   appBarColor: Palette.blackColor,
   backgroundColor: Palette.darkBackgroundColor,
   h1: _base.copyWith(fontSize: 48, height: 72 / 48),
-  h2: _base.copyWith(fontSize: 28, height: 36 / 28),
+  h2: _base.copyWith(fontSize: 32, height: 36 / 28),
   bodyLarge: _base.copyWith(fontSize: 16, height: 24 / 16),
   bodyRegular: _base.copyWith(fontSize: 14, height: 24 / 16),
   primaryColor: Palette.primaryColor,
@@ -76,10 +75,10 @@ final darkTheme = MyTheme (
   ),
   fontFamily: 'Poppins',
   bodySmall: _base.copyWith(fontSize: 12.0, height: 24 / 16),
-  bodyExtraSmall:_base.copyWith(fontSize: 10.0, height: 24 / 16),
+  bodyExtraSmall: _base.copyWith(fontSize: 10.0, height: 24 / 16),
 );
 
-final darkThemeData  = ThemeData(
+final darkThemeData = ThemeData(
   brightness: Brightness.dark,
   extensions: [darkTheme],
 );

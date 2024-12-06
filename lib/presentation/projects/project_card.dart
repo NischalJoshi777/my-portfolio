@@ -1,45 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/core/color/colors.dart';
-import 'package:my_portfolio/core/theme/my_theme.dart';
 import 'package:my_portfolio/core/widgets/responsive_size.dart';
 import 'package:my_portfolio/presentation/projects/project_utils.dart';
-import 'package:my_portfolio/presentation/widget/custom_header_text.dart';
 import 'package:sizer/sizer.dart';
-
-class ProjectDesktop extends StatelessWidget {
-  const ProjectDesktop({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
-    return Container(
-      padding: EdgeInsets.symmetric(horizontal: size.width / 8),
-      child: Column(
-        children: [
-          const CustomHeaderText(text: "\nProjects"),
-          const SizedBox(height: 20.0),
-          Text(
-            'Checkout few of the major projects that I have worked on till the date!',
-            style: context.bodyLarge,
-          ),
-          const SizedBox(height: 30.0),
-          Wrap(
-            alignment: WrapAlignment.start,
-            crossAxisAlignment: WrapCrossAlignment.start,
-            runSpacing: 3.w,
-            children: projectUtils
-                .asMap()
-                .entries
-                .map(
-                  (e) => ProjectCard(project: e.value),
-                )
-                .toList(),
-          )
-        ],
-      ),
-    );
-  }
-}
 
 class ProjectCard extends StatefulWidget {
   final ProjectUtils project;
@@ -60,7 +23,7 @@ class ProjectCardState extends State<ProjectCard> {
       hoverColor: Colors.transparent,
       splashColor: Colors.transparent,
       highlightColor: Colors.transparent,
-      onTap: () {},
+      onTap: null,
       onHover: (isHovering) {
         if (isHovering) {
           setState(() => isHover = true);
@@ -70,7 +33,7 @@ class ProjectCardState extends State<ProjectCard> {
       },
       child: Container(
         margin: EdgeInsets.symmetric(horizontal: 1.w),
-        width: ResponsiveSize.isDesktop(context) ? 30.w : 70.w,
+        width: ResponsiveSize.isDesktop(context) ? 36.w : 70.w,
         height: 36.h,
         decoration: BoxDecoration(
           border: Border.all(
@@ -91,11 +54,6 @@ class ProjectCardState extends State<ProjectCard> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Image.asset(
-                    widget.project.icons,
-                    height: height * 0.05,
-                  ),
-                  SizedBox(height: height * 0.02),
                   Text(
                     widget.project.titles,
                     style: TextStyle(

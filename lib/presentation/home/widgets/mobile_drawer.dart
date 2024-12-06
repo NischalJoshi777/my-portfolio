@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:my_portfolio/presentation/home/scroll_cubit/scroll_cubit.dart';
 import 'package:my_portfolio/presentation/home/widgets/my_logo.dart';
 
 import 'nav_bar.dart';
@@ -23,6 +25,7 @@ class MobileDrawer extends StatelessWidget {
                       padding: const EdgeInsets.all(8.0),
                       child: MaterialButton(
                         onPressed: () {
+                          context.read<ScrollCubit>().jumpTo(e.key);
                           Navigator.pop(context);
                         },
                         child: ListTile(

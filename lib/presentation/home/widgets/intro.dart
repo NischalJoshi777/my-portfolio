@@ -18,19 +18,16 @@ class Intro extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
-              'Nischal Joshi',
-              maxLines: 4,
-              style: ResponsiveSize.isDesktop(context)
-                  ? context.h1.copyWith(
-                      color: Palette.whiteColor,
-                      fontWeight: FontWeight.bold,
-                    )
-                  : context.h2.copyWith(
-                      color: Palette.whiteColor,
-                      fontWeight: FontWeight.bold,
-                    ),
-            ),
+            Text('Nischal Joshi',
+                style: ResponsiveSize.isDesktop(context)
+                    ? context.h1.copyWith(
+                        color: Palette.whiteColor,
+                        fontWeight: FontWeight.bold,
+                      )
+                    : context.h2.copyWith(
+                        color: Palette.whiteColor,
+                        fontWeight: FontWeight.bold,
+                      )),
             AnimatedTextKit(
               isRepeatingAnimation: ResponsiveSize.isDesktop(context),
               repeatForever: true,
@@ -43,26 +40,21 @@ class Intro extends StatelessWidget {
                           color: Palette.whiteColor,
                           fontWeight: FontWeight.w500,
                         )
-                      : context.bodyRegular.copyWith(
+                      : context.bodyLarge.copyWith(
                           color: Palette.whiteColor,
                           fontWeight: FontWeight.w500,
                         ),
                 ),
               ],
             ),
-            const SizedBox(height: 20.0),
+            const SizedBox(height: 10.0),
             Text(
               introMessage,
-              style: ResponsiveSize.isDesktop(context)
-                  ? context.bodyLarge.copyWith(
-                      color: Palette.whiteColor,
-                      fontWeight: FontWeight.w200,
-                    )
-                  : context.bodyRegular.copyWith(
-                      color: Palette.whiteColor,
-                      fontWeight: FontWeight.w200,
-                    ),
-              maxLines: 5,
+              style: context.bodyLarge.copyWith(
+                color: Palette.whiteColor,
+                fontWeight: FontWeight.w200,
+              ),
+              maxLines: 6,
             ),
             SizedBox(
               height: 2.h,
