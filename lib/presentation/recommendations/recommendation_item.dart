@@ -31,7 +31,7 @@ class RecommendationItem extends StatelessWidget {
                   height: 8.h,
                   width: 8.h,
                   child: Image.asset(
-                    'assets/imgs/my_profile.jpg',
+                    imagePath,
                     fit: BoxFit
                         .cover, // Ensures the image covers the entire circle
                   ),

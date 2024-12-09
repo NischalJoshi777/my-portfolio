@@ -1,13 +1,11 @@
 class ProjectUtils {
   final String banners;
-  // final String icons;
   final String titles;
   final String description;
   final String links;
 
   ProjectUtils({
     required this.banners,
-    // required this.icons,
     required this.titles,
     required this.description,
     required this.links,
@@ -33,10 +31,4 @@ List<ProjectUtils> projectUtils = [
     description: 'Employee side application of the Squadery TMS.',
     links: 'https://github.com/sudeshnb/elderly_exercise_app.git',
   ),
-  // ProjectUtils(
-  //   banners: 'assets/imgs/squadery_connect.png',
-  //   titles: 'Exercise App',
-  //   description: 'Employee side application of the Squadery TMS.',
-  //   links: 'https://github.com/sudeshnb/elderly_exercise_app.git',
-  // ),
 ];

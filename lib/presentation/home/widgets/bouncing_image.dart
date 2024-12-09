@@ -62,14 +62,14 @@ class _BouncingImageState extends State<BouncingImage>
             decoration: const BoxDecoration(
                 shape: BoxShape.circle, gradient: Palette.pinkpurple),
             child: Padding(
-              padding: const EdgeInsets.all(8.0), // Border thickness
+              padding: const EdgeInsets.all(6.0), // Border thickness
               child: ClipOval(
                 child: Container(
                   decoration: const BoxDecoration(
                     shape: BoxShape.circle,
                   ),
                   child: Image.asset(
-                    'assets/imgs/my_profile.jpg',
+                    'assets/imgs/my_profile.jpeg',
                     fit: BoxFit
                         .cover, // Ensures the image covers the entire circle
                   ),

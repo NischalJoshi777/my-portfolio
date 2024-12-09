@@ -28,25 +28,7 @@ class Intro extends StatelessWidget {
                         color: Palette.whiteColor,
                         fontWeight: FontWeight.bold,
                       )),
-            AnimatedTextKit(
-              isRepeatingAnimation: ResponsiveSize.isDesktop(context),
-              repeatForever: true,
-              animatedTexts: [
-                TyperAnimatedText(
-                  skillset,
-                  speed: const Duration(milliseconds: 50),
-                  textStyle: ResponsiveSize.isDesktop(context)
-                      ? context.h2.copyWith(
-                          color: Palette.whiteColor,
-                          fontWeight: FontWeight.w500,
-                        )
-                      : context.bodyLarge.copyWith(
-                          color: Palette.whiteColor,
-                          fontWeight: FontWeight.w500,
-                        ),
-                ),
-              ],
-            ),
+            const _AnimatedText(),
             const SizedBox(height: 10.0),
             Text(
               introMessage,
@@ -56,13 +38,38 @@ class Intro extends StatelessWidget {
               ),
               maxLines: 6,
             ),
-            SizedBox(
-              height: 2.h,
-            ),
+            SizedBox(height: 2.h),
             const SocialButtons(),
           ],
         ),
       ),
+    );
+  }
+}
+
+class _AnimatedText extends StatelessWidget {
+  const _AnimatedText({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return AnimatedTextKit(
+      isRepeatingAnimation: ResponsiveSize.isDesktop(context),
+      repeatForever: true,
+      animatedTexts: [
+        TyperAnimatedText(
+          skillset,
+          speed: const Duration(milliseconds: 50),
+          textStyle: ResponsiveSize.isDesktop(context)
+              ? context.h2.copyWith(
+                  color: Palette.whiteColor,
+                  fontWeight: FontWeight.w500,
+                )
+              : context.bodyLarge.copyWith(
+                  color: Palette.whiteColor,
+                  fontWeight: FontWeight.w500,
+                ),
+        ),
+      ],
     );
   }
 }

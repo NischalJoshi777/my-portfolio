@@ -52,7 +52,7 @@ class SkillsChart extends StatelessWidget {
                       width: 32.h,
                       decoration: const BoxDecoration(shape: BoxShape.circle),
                       child: Image.asset(
-                        'assets/imgs/my_profile.jpg',
+                        'assets/imgs/my_profile.jpeg',
                         fit: BoxFit.cover,
                       ),
                     ),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/core/theme/my_theme.dart';
 import 'package:my_portfolio/core/widgets/responsive_size.dart';
+import 'package:my_portfolio/data/recommendation.dart';
 import 'package:my_portfolio/presentation/recommendations/recommendation_list.dart';
 import 'package:my_portfolio/presentation/widget/custom_header_text.dart';
 import 'package:sizer/sizer.dart';

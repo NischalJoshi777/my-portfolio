@@ -6,6 +6,7 @@ import 'package:my_portfolio/presentation/skills/widget/skills_body.dart';
 import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 
 import '../scroll_cubit/scroll_cubit.dart';
+import 'copy_right_body.dart';
 import 'home_view.dart';
 
 class BodySections {
@@ -14,7 +15,7 @@ class BodySections {
     SkillsBody(),
     ProjectBody(),
     RecommendationBody(),
-    ContactBody(),
+    CopyRightBody(),
   ];
 }
 
@@ -29,26 +30,6 @@ class Body extends StatelessWidget {
       itemCount: BodySections.views.length,
       itemBuilder: (context, index) => BodySections.views[index],
       itemScrollController: scrollcubit.itemScrollController,
-    );
-  }
-}
-
-class ContactBody extends StatelessWidget {
-  const ContactBody({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      children: [
-        // Icon(
-        //   Icons.email_outlined,
-        //   size: 44.0,
-        // ),
-        // Icon(
-        //   Icons.pin_drop_outlined,
-        //   size: 44.0,
-        // ),
-      ],
     );
   }
 }

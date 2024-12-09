@@ -23,19 +23,28 @@ class ProjectBody extends StatelessWidget {
           style: context.bodyLarge,
         ),
         const SizedBox(height: 30.0),
-        Wrap(
-          alignment: WrapAlignment.start,
-          crossAxisAlignment: WrapCrossAlignment.start,
-          runSpacing: 5.h,
-          children: projectUtils
-              .asMap()
-              .entries
-              .map(
-                (e) => ProjectCard(project: e.value),
-              )
-              .toList(),
-        )
+        const _ProjectList(),
       ],
+    );
+  }
+}
+
+class _ProjectList extends StatelessWidget {
+  const _ProjectList({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Wrap(
+      alignment: WrapAlignment.start,
+      crossAxisAlignment: WrapCrossAlignment.start,
+      runSpacing: 5.h,
+      children: projectUtils
+          .asMap()
+          .entries
+          .map(
+            (e) => ProjectCard(project: e.value),
+          )
+          .toList(),
     );
   }
 }
