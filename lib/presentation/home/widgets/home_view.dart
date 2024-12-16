@@ -9,9 +9,8 @@ class HomeView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const ResponsiveSize(
-      desktop: HomeDesktop() ,
-      mobile: HomeMobile(),
-    );
+    return ResponsiveSize.isDesktop(context)
+        ? const HomeDesktop()
+        : const HomeMobile();
   }
 }

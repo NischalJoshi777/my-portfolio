@@ -38,8 +38,8 @@ class ExperienceInfo extends StatelessWidget {
         return Text(
           title.toUpperCase(),
           style: ResponsiveSize.isDesktop(context)
-              ? context.h2.copyWith(fontWeight: FontWeight.bold)
-              : context.bodyLarge.copyWith(fontWeight: FontWeight.bold),
+              ? context.myTheme.h2.copyWith(fontWeight: FontWeight.bold)
+              : context.myTheme.bodyLarge.copyWith(fontWeight: FontWeight.bold),
         );
       },
     );
@@ -50,7 +50,8 @@ class ExperienceInfo extends StatelessWidget {
       builder: (context) {
         return Text(
           countries,
-          style: context.bodyLarge.copyWith(fontWeight: FontWeight.w300),
+          style:
+              context.myTheme.bodyLarge.copyWith(fontWeight: FontWeight.w300),
         );
       },
     );

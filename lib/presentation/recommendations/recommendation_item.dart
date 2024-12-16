@@ -18,7 +18,7 @@ class RecommendationItem extends StatelessWidget {
   });
 
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: ResponsiveSize.isDesktop(context) ? 40.w : 70.w,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
@@ -38,26 +38,29 @@ class RecommendationItem extends StatelessWidget {
                 ),
               ),
               SizedBox(width: 2.w),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    name,
-                    style: context.bodyRegular
-                        .copyWith(fontWeight: FontWeight.bold),
-                  ),
-                  Text(
-                    title,
-                    style: context.bodyRegular.copyWith(),
-                  )
-                ],
+              Flexible(
+                flex: 2,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      name,
+                      style: context.myTheme.bodyRegular
+                          .copyWith(fontWeight: FontWeight.bold),
+                    ),
+                    Text(
+                      title,
+                      style: context.myTheme.bodyRegular,
+                    )
+                  ],
+                ),
               )
             ],
           ),
           SizedBox(height: 3.h),
           Text(
             recommendation,
-            style: context.bodyRegular,
+            style: context.myTheme.bodyRegular,
           ),
           SizedBox(height: 2.h),
         ],

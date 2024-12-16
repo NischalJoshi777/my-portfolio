@@ -20,7 +20,7 @@ class ProjectBody extends StatelessWidget {
         const SizedBox(height: 20.0),
         Text(
           'Checkout few of the major projects that I have worked on till the date!',
-          style: context.bodyLarge,
+          style: context.myTheme.bodyLarge,
         ),
         const SizedBox(height: 30.0),
         const _ProjectList(),

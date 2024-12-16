@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:my_portfolio/core/color/colors.dart';
-import 'package:my_portfolio/core/theme/my_theme.dart';
 import 'package:my_portfolio/presentation/home/scroll_cubit/scroll_cubit.dart';
 import 'package:my_portfolio/presentation/home/widgets/my_logo.dart';
 
@@ -41,11 +40,10 @@ class NavBarDesktop extends StatelessWidget {
                     onPressed: () {
                       context.read<ScrollCubit>().jumpTo(e.key);
                     },
-                    child: Text(
-                      e.value,
-                      style: context.bodyLarge
-                          .copyWith(color: Palette.darkTextColor),
-                    ),
+                    child: Text(e.value,
+                        style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                              color: Palette.darkTextColor,
+                            )),
                   ),
                 ),
               )
@@ -67,6 +65,7 @@ class NavBarTablet extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
+      centerTitle: false,
       title: const MyLogo(),
     );
   }

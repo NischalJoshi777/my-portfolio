@@ -18,7 +18,6 @@ mixin _$MyThemeTailorMixin on ThemeExtension<MyTheme> {
   TextStyle get bodySmall;
   TextStyle get bodyExtraSmall;
   TextStyle get bodyLarge;
-  String get fontFamily;
   Color get primaryColor;
   Color get secondaryColor;
   Color get scaffoldBackGroundColor;
@@ -35,7 +34,6 @@ mixin _$MyThemeTailorMixin on ThemeExtension<MyTheme> {
     TextStyle? bodySmall,
     TextStyle? bodyExtraSmall,
     TextStyle? bodyLarge,
-    String? fontFamily,
     Color? primaryColor,
     Color? secondaryColor,
     Color? scaffoldBackGroundColor,
@@ -51,7 +49,6 @@ mixin _$MyThemeTailorMixin on ThemeExtension<MyTheme> {
       bodySmall: bodySmall ?? this.bodySmall,
       bodyExtraSmall: bodyExtraSmall ?? this.bodyExtraSmall,
       bodyLarge: bodyLarge ?? this.bodyLarge,
-      fontFamily: fontFamily ?? this.fontFamily,
       primaryColor: primaryColor ?? this.primaryColor,
       secondaryColor: secondaryColor ?? this.secondaryColor,
       scaffoldBackGroundColor:
@@ -73,7 +70,6 @@ mixin _$MyThemeTailorMixin on ThemeExtension<MyTheme> {
       bodySmall: TextStyle.lerp(bodySmall, other.bodySmall, t)!,
       bodyExtraSmall: TextStyle.lerp(bodyExtraSmall, other.bodyExtraSmall, t)!,
       bodyLarge: TextStyle.lerp(bodyLarge, other.bodyLarge, t)!,
-      fontFamily: t < 0.5 ? fontFamily : other.fontFamily,
       primaryColor: Color.lerp(primaryColor, other.primaryColor, t)!,
       secondaryColor: Color.lerp(secondaryColor, other.secondaryColor, t)!,
       scaffoldBackGroundColor: Color.lerp(
@@ -101,8 +97,6 @@ mixin _$MyThemeTailorMixin on ThemeExtension<MyTheme> {
                 .equals(bodyExtraSmall, other.bodyExtraSmall) &&
             const DeepCollectionEquality().equals(bodyLarge, other.bodyLarge) &&
             const DeepCollectionEquality()
-                .equals(fontFamily, other.fontFamily) &&
-            const DeepCollectionEquality()
                 .equals(primaryColor, other.primaryColor) &&
             const DeepCollectionEquality()
                 .equals(secondaryColor, other.secondaryColor) &&
@@ -125,7 +119,6 @@ mixin _$MyThemeTailorMixin on ThemeExtension<MyTheme> {
       const DeepCollectionEquality().hash(bodySmall),
       const DeepCollectionEquality().hash(bodyExtraSmall),
       const DeepCollectionEquality().hash(bodyLarge),
-      const DeepCollectionEquality().hash(fontFamily),
       const DeepCollectionEquality().hash(primaryColor),
       const DeepCollectionEquality().hash(secondaryColor),
       const DeepCollectionEquality().hash(scaffoldBackGroundColor),
@@ -134,20 +127,6 @@ mixin _$MyThemeTailorMixin on ThemeExtension<MyTheme> {
   }
 }
 
-extension MyThemeBuildContextProps on BuildContext {
+extension MyThemeBuildContext on BuildContext {
   MyTheme get myTheme => Theme.of(this).extension<MyTheme>()!;
-  Color get backgroundColor => myTheme.backgroundColor;
-  Color get appBarColor => myTheme.appBarColor;
-  Color get iconColor => myTheme.iconColor;
-  TextStyle get h1 => myTheme.h1;
-  TextStyle get h2 => myTheme.h2;
-  TextStyle get bodyRegular => myTheme.bodyRegular;
-  TextStyle get bodySmall => myTheme.bodySmall;
-  TextStyle get bodyExtraSmall => myTheme.bodyExtraSmall;
-  TextStyle get bodyLarge => myTheme.bodyLarge;
-  String get fontFamily => myTheme.fontFamily;
-  Color get primaryColor => myTheme.primaryColor;
-  Color get secondaryColor => myTheme.secondaryColor;
-  Color get scaffoldBackGroundColor => myTheme.scaffoldBackGroundColor;
-  AppBarTheme get appBarTheme => myTheme.appBarTheme;
 }

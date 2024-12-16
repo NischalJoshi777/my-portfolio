@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_portfolio/core/widgets/index.dart';
 import 'package:my_portfolio/presentation/skills/widget/what_i_can_do_icon.dart';
 import 'package:sizer/sizer.dart';
 
@@ -10,7 +11,7 @@ class WhatICanDoList extends StatelessWidget {
     return Wrap(
       alignment: WrapAlignment.start,
       crossAxisAlignment: WrapCrossAlignment.start,
-      spacing: 3.h,
+      spacing: ResponsiveSize.isMobile(context) ? 0.0 : 3.h,
       runSpacing: 3.h,
       children: const [
         WhatIdoIcon(

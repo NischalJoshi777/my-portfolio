@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:my_portfolio/presentation/home/scroll_cubit/scroll_cubit.dart';
-import 'package:my_portfolio/presentation/home/widgets/my_logo.dart';
 
+import 'my_logo.dart';
 import 'nav_bar.dart';
 
 class MobileDrawer extends StatelessWidget {
@@ -31,11 +31,9 @@ class MobileDrawer extends StatelessWidget {
                         child: ListTile(
                           leading: Icon(
                             navIcons[e.key],
-                            // color: theme.primaryColor,
                           ),
                           title: Text(
                             e.value,
-                            // style: AppText.l1,
                           ),
                         ),
                       ),

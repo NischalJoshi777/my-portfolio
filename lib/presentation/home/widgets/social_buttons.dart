@@ -12,41 +12,46 @@ class SocialButtons extends StatelessWidget {
     return Row(
       mainAxisSize: MainAxisSize.min,
       children: [
-        PrimaryButton(
-            onPressed: () => launchUrl(
-                  Uri.parse('https://www.linkedin.com/in/nischal-joshi777/'),
-                  mode: LaunchMode.externalApplication,
-                ),
-            color: Palette.linkedInColor,
-            child: Text(
-              'LinkedIn',
-              style: ResponsiveSize.isDesktop(context)
-                  ? context.bodyLarge.copyWith(
-                      color: Palette.whiteColor,
-                    )
-                  : context.bodyRegular.copyWith(
-                      color: Palette.whiteColor,
-                    ),
-            )),
+        Flexible(
+          child: PrimaryButton(
+              onPressed: () => launchUrl(
+                    Uri.parse('https://www.linkedin.com/in/nischal-joshi777/'),
+                    mode: LaunchMode.externalApplication,
+                  ),
+              color: Palette.linkedInColor,
+              child: Text(
+                'LinkedIn',
+                style: ResponsiveSize.isDesktop(context)
+                    ? context.myTheme.bodyLarge.copyWith(
+                        color: Palette.whiteColor,
+                      )
+                    : context.myTheme.bodyRegular.copyWith(
+                        color: Palette.whiteColor,
+                      ),
+                maxLines: 2,
+              )),
+        ),
         const SizedBox(
           width: 12.0,
         ),
-        PrimaryButton(
-            onPressed: () => launchUrl(
-                  Uri.parse('https://github.com/NischalJoshi777'),
-                  mode: LaunchMode.externalApplication,
-                ),
-            color: Colors.white70,
-            child: Text(
-              'GitHub',
-              style: ResponsiveSize.isDesktop(context)
-                  ? context.bodyLarge.copyWith(
-                      color: Palette.whiteColor,
-                    )
-                  : context.bodyRegular.copyWith(
-                      color: Palette.whiteColor,
-                    ),
-            )),
+        Flexible(
+          child: PrimaryButton(
+              onPressed: () => launchUrl(
+                    Uri.parse('https://github.com/NischalJoshi777'),
+                    mode: LaunchMode.externalApplication,
+                  ),
+              color: Colors.white70,
+              child: Text(
+                'GitHub',
+                style: ResponsiveSize.isDesktop(context)
+                    ? context.myTheme.bodyLarge.copyWith(
+                        color: Palette.whiteColor,
+                      )
+                    : context.myTheme.bodyRegular.copyWith(
+                        color: Palette.whiteColor,
+                      ),
+              )),
+        ),
       ],
     );
   }

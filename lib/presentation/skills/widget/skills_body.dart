@@ -1,13 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:my_portfolio/core/widgets/index.dart';
+import 'package:my_portfolio/presentation/skills/widget/experience.dart';
+import 'package:my_portfolio/presentation/skills/widget/experience_info.dart';
 import 'package:my_portfolio/presentation/skills/widget/skill_chart.dart';
 import 'package:my_portfolio/presentation/skills/widget/skill_set.dart';
 import 'package:my_portfolio/presentation/skills/widget/what_i_can_do_list.dart';
 import 'package:my_portfolio/presentation/widget/custom_header_text.dart';
 import 'package:sizer/sizer.dart';
-
-import 'experience.dart';
-import 'experience_info.dart';
 
 class SkillsBody extends StatelessWidget {
   const SkillsBody({super.key});
@@ -23,13 +22,13 @@ class SkillsBody extends StatelessWidget {
           const CustomHeaderText(
             text: 'SKILLS',
           ),
-          const SizedBox(height: 32.0),
+          SizedBox(height: 2.h),
           const WhatICanDoList(),
-          const SizedBox(height: 60.0),
+          SizedBox(height: 2.h),
           const SkillSet(),
-          const SizedBox(height: 40.0),
+          SizedBox(height: 2.h),
           const SkillsChart(),
-          const SizedBox(height: 48.0),
+          SizedBox(height: 3.h),
           const CustomHeaderText(
             text: 'EXPERIENCE',
           ),

@@ -20,7 +20,7 @@ class RecommendationBody extends StatelessWidget {
         const CustomHeaderText(text: 'RECOMMENDATIONS'),
         Text(
           'These recommendations are from my LinkedIn profile.',
-          style: context.bodyRegular,
+          style: context.myTheme.bodyRegular,
         ),
         SizedBox(height: 3.h),
         RecommendationList(recommendations: myRecommendations),

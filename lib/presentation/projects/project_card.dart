@@ -58,24 +58,27 @@ class ProjectCardState extends State<ProjectCard> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   SizedBox(height: height * 0.02),
-                  Text(
-                    widget.project.titles,
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      color:
-                          isHover ? Palette.whiteColor : Palette.darkTextColor,
+                  Flexible(
+                    child: Text(
+                      widget.project.titles,
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color:
+                            isHover ? Palette.whiteColor : Palette.darkTextColor,
+                      ),
+                      textAlign: TextAlign.center,
                     ),
-                    textAlign: TextAlign.center,
                   ),
                   SizedBox(height: height * 0.01),
-                  Text(
+                  Flexible(child:Text(
                     widget.project.description,
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       color:
-                          isHover ? Palette.whiteColor : Palette.darkTextColor,
+                      isHover ? Palette.whiteColor : Palette.darkTextColor,
                     ),
-                  ),
+                  ),),
+
                   SizedBox(height: height * 0.01),
                 ],
               ),

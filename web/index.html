@@ -31,30 +31,9 @@
 
   <title>my_portfolio</title>
   <link rel="manifest" href="manifest.json">
-
-  <script>
-    // The value below is injected by flutter build, do not touch.
-    const serviceWorkerVersion = null;
-  </script>
-  <!-- This script adds the flutter initialization JS code -->
-  <script src="flutter.js" defer></script>
 </head>
 <body>
-  <script>
-    window.addEventListener('load', function(ev) {
-      // Download main.dart.js
-      _flutter.loader.loadEntrypoint({
-        serviceWorker: {
-          serviceWorkerVersion: serviceWorkerVersion,
-        },
-        onEntrypointLoaded: function(engineInitializer) {
-          engineInitializer.initializeEngine().then(function(appRunner) {
-            appRunner.runApp();
-          });
-        }
-      });
-    });
-  </script>
+  <script src="flutter_bootstrap.js" async></script>
   <script type="module">
   // Import the functions you need from the SDKs you need
   import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js";
@@ -70,8 +49,8 @@
     projectId: "my-portfolio-d3b6a",
     storageBucket: "my-portfolio-d3b6a.firebasestorage.app",
     messagingSenderId: "1012010745022",
-    appId: "1:1012010745022:web:1be1e53eecda8b726672ef",
-    measurementId: "G-EDZY2BJKG7"
+    appId: "1:1012010745022:web:7cfcc8a12aea718c6672ef",
+    measurementId: "G-YNR7B9Y698"
   };
 
   // Initialize Firebase

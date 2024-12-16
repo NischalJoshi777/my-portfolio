@@ -49,6 +49,11 @@ dependencies:
   sizer: ^2.0.15
   animated_text_kit: ^4.2.2
   url_launcher: ^6.3.1
+  firebase_core: ^2.10.0
+  responsive_framework:
+  connectivity_plus: ^2.3.7
+  theme_tailor_annotation: ^3.0.1
+
 
 
 
@@ -65,7 +70,6 @@ dev_dependencies:
   flutter_lints: ^2.0.0
   build_runner: ^2.4.9
   theme_tailor: ^3.0.1
-  theme_tailor_annotation: ^3.0.1
 
 
 # For information on the generic Dart part of this file, see the

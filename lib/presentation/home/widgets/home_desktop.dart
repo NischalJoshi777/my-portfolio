@@ -16,7 +16,7 @@ class HomeDesktop extends StatelessWidget {
         Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Expanded(
+            Flexible(
               flex: 2,
               child: Padding(
                 padding: EdgeInsets.only(right: 12.w),

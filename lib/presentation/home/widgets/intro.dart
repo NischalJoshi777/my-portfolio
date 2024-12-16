@@ -18,25 +18,31 @@ class Intro extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text('Nischal Joshi',
-                style: ResponsiveSize.isDesktop(context)
-                    ? context.h1.copyWith(
-                        color: Palette.whiteColor,
-                        fontWeight: FontWeight.bold,
-                      )
-                    : context.h2.copyWith(
-                        color: Palette.whiteColor,
-                        fontWeight: FontWeight.bold,
-                      )),
+            Text(
+              'Nischal Joshi',
+              style: ResponsiveSize.isDesktop(context)
+                  ? context.myTheme.h1.copyWith(
+                      color: Palette.whiteColor,
+                      fontWeight: FontWeight.bold,
+                    )
+                  : context.myTheme.h2.copyWith(
+                      color: Palette.whiteColor,
+                      fontWeight: FontWeight.bold,
+                    ),
+              textAlign: TextAlign.center,
+            ),
             const _AnimatedText(),
             const SizedBox(height: 10.0),
             Text(
               introMessage,
-              style: context.bodyLarge.copyWith(
-                color: Palette.whiteColor,
-                fontWeight: FontWeight.w200,
-              ),
-              maxLines: 6,
+              style: ResponsiveSize.isMobile(context)
+                  ? context.myTheme.bodyRegular.copyWith(
+                      color: Palette.whiteColor,
+                    )
+                  : context.myTheme.bodyLarge.copyWith(
+                      color: Palette.whiteColor,
+                      fontWeight: FontWeight.w200,
+                    ),
             ),
             SizedBox(height: 2.h),
             const SocialButtons(),
@@ -60,11 +66,11 @@ class _AnimatedText extends StatelessWidget {
           skillset,
           speed: const Duration(milliseconds: 50),
           textStyle: ResponsiveSize.isDesktop(context)
-              ? context.h2.copyWith(
+              ? context.myTheme.h2.copyWith(
                   color: Palette.whiteColor,
                   fontWeight: FontWeight.w500,
                 )
-              : context.bodyLarge.copyWith(
+              : context.myTheme.bodyLarge.copyWith(
                   color: Palette.whiteColor,
                   fontWeight: FontWeight.w500,
                 ),
