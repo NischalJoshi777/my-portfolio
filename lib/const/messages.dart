@@ -1,7 +1,3 @@
 const introMessage =
-    'A software engineer with 4 years of experience in the field of'
-    ' mobile application and web application development. '
-    ' I primarily specialize in building cross-platform applications using Flutter framework. '
-    ' I am currently completing my Master\'s degree in Computer Science.';
-
-const skillset = 'Android | iOS | Dart | Flutter | Java';
+    "I am a product-focused software engineer with over 4 years of experience specializing in mobile app development for Android and iOS using Flutter and Dart. I have designed, developed, and deployed scalable applications across EdTech, Travel Tech, and Recruitment Technology domains. Currently pursuing a Master's in Computer Science, I combine technical expertise with a passion for product management, delivering solutions that bridge technical execution and strategic vision to solve real-world challenges and create user value.";
+const skillset = 'Android | iOS | Dart | Flutter | Java ';

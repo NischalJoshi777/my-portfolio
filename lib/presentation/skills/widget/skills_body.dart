@@ -24,9 +24,9 @@ class SkillsBody extends StatelessWidget {
           ),
           SizedBox(height: 2.h),
           const WhatICanDoList(),
-          SizedBox(height: 2.h),
+          SizedBox(height: 3.h),
           const SkillSet(),
-          SizedBox(height: 2.h),
+          SizedBox(height: 3.h),
           const SkillsChart(),
           SizedBox(height: 3.h),
           const CustomHeaderText(
