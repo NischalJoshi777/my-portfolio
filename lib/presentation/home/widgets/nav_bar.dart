@@ -12,10 +12,10 @@ List<IconData> navIcons = [
 ];
 
 List<String> navTitles = [
-  'HOME',
+  'INTRO',
   'SKILLS',
   'PROJECTS',
-  'RECOMMENDATIONS',
+  'TESTIMONIALS',
 ];
 
 class NavBarDesktop extends StatelessWidget {

@@ -17,7 +17,7 @@ class RecommendationBody extends StatelessWidget {
           : CrossAxisAlignment.start,
       children: [
         SizedBox(height: 4.h),
-        const CustomHeaderText(text: 'RECOMMENDATIONS'),
+        const CustomHeaderText(text: 'TESTIMONIALS'),
         Text(
           'These recommendations are from my LinkedIn profile.',
           style: context.myTheme.bodyRegular,

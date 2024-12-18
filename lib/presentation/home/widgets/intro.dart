@@ -18,19 +18,7 @@ class Intro extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
-              'Nischal Joshi',
-              style: ResponsiveSize.isDesktop(context)
-                  ? context.myTheme.h1.copyWith(
-                      color: Palette.whiteColor,
-                      fontWeight: FontWeight.bold,
-                    )
-                  : context.myTheme.h2.copyWith(
-                      color: Palette.whiteColor,
-                      fontWeight: FontWeight.bold,
-                    ),
-              textAlign: TextAlign.center,
-            ),
+            const _MyName(),
             const _AnimatedText(),
             const SizedBox(height: 10.0),
             Text(
@@ -48,6 +36,55 @@ class Intro extends StatelessWidget {
             const SocialButtons(),
           ],
         ),
+      ),
+    );
+  }
+}
+
+class _MyName extends StatefulWidget {
+  const _MyName({super.key});
+
+  @override
+  State<_MyName> createState() => _MyNameState();
+}
+
+class _MyNameState extends State<_MyName> with SingleTickerProviderStateMixin {
+  late Animation<double> opacity;
+  late AnimationController _controller;
+
+  @override
+  void initState() {
+    super.initState();
+    _controller = AnimationController(
+      vsync: this,
+      duration: const Duration(milliseconds: 1000),
+    );
+    opacity = Tween<double>(begin: 0.0, end: 1.0).animate(
+      CurvedAnimation(
+        parent: _controller,
+        curve: Curves.ease,
+      ),
+    );
+
+    _controller.forward();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return FadeTransition(
+      opacity: opacity,
+      child: Text(
+        'Nischal Joshi',
+        style: ResponsiveSize.isDesktop(context)
+            ? context.myTheme.h1.copyWith(
+                color: Palette.whiteColor,
+                fontWeight: FontWeight.bold,
+              )
+            : context.myTheme.h2.copyWith(
+                color: Palette.whiteColor,
+                fontWeight: FontWeight.bold,
+              ),
+        textAlign: TextAlign.center,
       ),
     );
   }
