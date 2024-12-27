@@ -1,15 +1,6 @@
 # my_portfolio
-A portfolio designed in flutter framework.
+A portfolio website designed and developed using Flutter. 
+Hosted using Firebase Hosting. 
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<img src = "https://github.com/user-attachments/assets/6d3216c7-30e3-4d64-a6d6-122841576303" width = 200> 
+<img width="1431" alt="Screenshot 2024-12-27 at 11 41 52" src="https://github.com/user-attachments/assets/e6b2e038-0db0-44b2-8023-5eda4f115c1f" />
