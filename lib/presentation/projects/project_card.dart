@@ -26,7 +26,11 @@ class ProjectCardState extends State<ProjectCard> {
       hoverColor: Colors.transparent,
       splashColor: Colors.transparent,
       highlightColor: Colors.transparent,
-      onTap: () {},
+      onTap: () {
+        setState(() {
+          isHover = !isHover;
+        });
+      },
       onHover: (isHovering) {
         if (isHovering) {
           setState(() => isHover = true);
@@ -63,22 +67,25 @@ class ProjectCardState extends State<ProjectCard> {
                       widget.project.titles,
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        color:
-                            isHover ? Palette.whiteColor : Palette.darkTextColor,
+                        color: isHover
+                            ? Palette.whiteColor
+                            : Palette.darkTextColor,
                       ),
                       textAlign: TextAlign.center,
                     ),
                   ),
                   SizedBox(height: height * 0.01),
-                  Flexible(child:Text(
-                    widget.project.description,
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      color:
-                      isHover ? Palette.whiteColor : Palette.darkTextColor,
+                  Flexible(
+                    child: Text(
+                      widget.project.description,
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        color: isHover
+                            ? Palette.whiteColor
+                            : Palette.darkTextColor,
+                      ),
                     ),
-                  ),),
-
+                  ),
                   SizedBox(height: height * 0.01),
                 ],
               ),
